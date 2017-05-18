@@ -1,0 +1,91 @@
+$header-color: #f1f1f1;
+$footer-color: $header-color;
+$divider-color: $header-color;
+$extra-color: #cdf0f6;
+$menu-color: #fff;
+$text-color: #000;
+$header-height: 60px;
+$extra-height: 20px;
+
+* {
+  box-sizing: border-box;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h4,
+h3 {
+  color: rgba($text-color, .87);
+}
+
+.content-area,
+.footer-area {
+  margin: auto;
+  width: 99%;
+}
+
+.content-area {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+.elearning-header {
+  background: $header-color;
+  height: $header-height;
+
+  h3 {
+    font-weight: bold;
+    line-height: $header-height;
+    padding-left: 20px;
+  }
+}
+
+.elearning-main {
+  padding: 20px 0;
+
+  .row {
+    margin: 1px;
+  }
+
+  .menu {
+    background: $menu-color;
+    height: auto;
+
+    div {
+      border-bottom: 1px solid $divider-color;
+      padding: 10px;
+    }
+
+    a {
+      color: rgba($text-color, .87);
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+  }
+
+  .extra {
+    background: $extra-color;
+
+    p {
+      color: rgba($text-color, .54);
+      display: list-item;
+      list-style-position: inside;
+      list-style-type: disc;
+      margin: 20px;
+    }
+  }
+}
+
+.footer-area {
+  background: $footer-color;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: center;
+}
