@@ -1,11 +1,25 @@
 $header-color: #f1f1f1;
 $footer-color: $header-color;
 $divider-color: $header-color;
-$extra-color: #cdf0f6;
-$menu-color: #fff;
 $text-color: #000;
-$header-height: 60px;
+$menu-color: #fff;
+$extra-color: #cdf0f6;
 $extra-height: 20px;
+$header-height: 60px;
+
+
+@mixin flex($value) {
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin flex-direction($value) {
+  display: -webkit-flex;
+  -webkit-flex-direction: $value;
+  display: flex;
+  flex-direction: $value;
+}
 
 * {
   box-sizing: border-box;
@@ -15,8 +29,7 @@ $extra-height: 20px;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  @include flex-direction(column);
   min-height: 100vh;
 }
 
@@ -32,7 +45,7 @@ h3 {
 }
 
 .content-area {
-  flex: 1;
+  @include flex(1);
   padding-bottom: 40px;
 }
 
